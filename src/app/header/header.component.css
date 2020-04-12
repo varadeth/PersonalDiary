@@ -1,0 +1,32 @@
+.mynavbar {
+    background-color: #663897;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+}
+
+.leftStyle {
+    float: left;
+    width: 8%;
+}
+
+.brandLogo {
+    height:70px;
+    width: 80%;
+    padding: 5%
+}
+
+.brand-name {
+    margin-left: 5%;
+    margin-top: 13px;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    color: #6EFFFE;
+    font: 22pt open-sans;
+    text-decoration: none;
+    font-weight: 500;
+}

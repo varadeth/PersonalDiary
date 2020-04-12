@@ -1,0 +1,26 @@
+.footer-style {
+    width: 100%;
+    bottom: 0px;
+    height: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #BBDEFB;
+}
+
+.left {
+    width: 50%;
+    float: left;
+    color: black;
+    font: 11pt open-sans;
+    font-weight: 500;
+}
+
+.right {
+    width: 50%;
+    float: left;
+    color: black;
+    font: 11pt open-sans;
+    font-weight: 500;
+}
