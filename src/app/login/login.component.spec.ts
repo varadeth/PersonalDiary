@@ -1,14 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
+
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import { LoginComponent } from './login.component';
+import { MatDialogRef, MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
-
+  const mockDialogRef = {
+    close: jasmine.createSpy('close')
+  };
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      declarations: [ LoginComponent ],
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: {}
+        }
+      ]
     })
     .compileComponents();
   }));

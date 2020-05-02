@@ -11,7 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { NavigationlinksComponent } from './header/navigationlinks/navigationlinks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 
 const appRoutes: Routes = [
   {path:'',component: SliderComponent},
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

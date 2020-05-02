@@ -1,0 +1,10 @@
+.registerButton {
+    margin: auto;
+    display: block;
+    background-color: #2d3e7f;
+    color: aliceblue;
+}
+
+.header {
+    text-align: center;
+}

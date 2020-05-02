@@ -1,0 +1,15 @@
+.loginButton {
+    margin: auto;
+    display: block;
+    background-color: #2d3e7f;
+    color: aliceblue;
+}
+
+.header {
+    text-align: center;
+}
+
+.inputStyle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

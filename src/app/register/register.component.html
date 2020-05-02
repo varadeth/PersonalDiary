@@ -1,1 +1,23 @@
-<p style="width: 400px; height: 700px; margin-bottom: 0px; background-color: black;">register works!</p>
+<h1 mat-dialog-title class="header">Register</h1>
+<mat-dialog-content>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Name" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="contactNo" placeholder="Contact Number" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="email" placeholder="Email"/>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="Username" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="password" placeholder="Password" />
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button type="button" mat-raised-button class="registerButton"  (click)="closeModal()">Register</button>
+</mat-dialog-actions>

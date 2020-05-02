@@ -15,6 +15,7 @@
     color: black;
     font: 11pt open-sans;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .right {
@@ -23,4 +24,5 @@
     color: black;
     font: 11pt open-sans;
     font-weight: 500;
+    cursor: pointer;
 }
