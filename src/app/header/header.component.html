@@ -1,6 +1,12 @@
-<ul class="mynavbar">
-    <li class="leftStyle"><img class="brandLogo" src={{brandImage}} alt="logo" /></li>
-    <li class="leftStyle"><a routerLink='' class="brand-name">DIARY</a></li>
-    <app-navigationlinks></app-navigationlinks>
-</ul>
+<div class="mynavbar">
+    <div style="display: inline-block; width: 50%; height:100%">
+    <ul class="ulStyle">
+        <li class="leftStyle"><img class="brandLogo" [src]="brandImage" alt="logo" /></li>
+        <li class="leftStyle"><a routerLink='' class="brand-name">DIARY</a></li>
+    </ul>
+    </div>
+    <div style="display: inline-block; width: 50%; position: relative; height: 100%;">
+        <app-navigationlinks></app-navigationlinks>
+    </div>
+</div>
 

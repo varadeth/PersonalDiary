@@ -1,7 +1,3 @@
-<!--<li class="rightStyle"><a class="linkStyle" routerLink='/login'>LOGIN</a></li>
-<li class="rightStyle"><a class="linkStyle" routerLink="/signup">SIGNUP</a></li>-->
-
-<li class="rightStyle" *ngFor="let link of links; let i = index">
-    <a class="linkStyle" (click)="buttonPressed(i)">{{link.name}}</a>
-    <!--<button (click)="buttonPressed(i)">{{link.name}}</button>-->
-</li>
+<div class="rightStyle" *ngFor="let link of links; let i = index">
+    <div class="linkStyle" (click)="buttonPressed(i)">{{link.name}}</div>
+</div>

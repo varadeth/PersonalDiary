@@ -8,9 +8,6 @@ import { MatDialogRef, MatDialog, MatDialogModule } from '@angular/material/dial
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
-  const mockDialogRef = {
-    close: jasmine.createSpy('close')
-  };
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],

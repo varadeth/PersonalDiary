@@ -1,27 +1,35 @@
 .mynavbar {
     background-color: #663897;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    position: sticky;
+    z-index: 1;
     overflow: hidden;
+    height: 9.11%;
+}
+
+.ulStyle {
+    list-style-type: none;
+    height: 100%;
     width: 100%;
-    height: 70px;
+    padding: 0%;
+    margin-left: 2%;
+    margin-bottom: 0%;
 }
 
 .leftStyle {
     float: left;
     width: 8%;
+    height: 100%;
 }
 
 .brandLogo {
-    height:70px;
-    width: 80%;
-    padding: 5%
+    height: 90%;
+    width: 100%;
+    margin-top: 2%;
 }
 
 .brand-name {
-    margin-left: 5%;
-    margin-top: 13px;
+    margin-left: 40%;
+    margin-top: 15%;
     padding: 5px;
     display: block;
     text-align: center;

@@ -8,3 +8,11 @@
 .header {
     text-align: center;
 }
+
+
+.signUpButton {
+    margin: auto;
+    display: block;
+    background-color: #2d3e7f;
+    color: aliceblue;
+}

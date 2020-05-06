@@ -1,12 +1,12 @@
 .footer-style {
     width: 100%;
     bottom: 0px;
-    height: 87px;
+    height: 11.32%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #BBDEFB;
+    background-color: hsl(207, 89%, 86%);
 }
 
 .left {

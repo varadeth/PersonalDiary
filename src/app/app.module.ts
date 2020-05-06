@@ -12,11 +12,12 @@ import { NavigationlinksComponent } from './header/navigationlinks/navigationlin
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 const appRoutes: Routes = [
-  {path:'',component: SliderComponent},
-  {path: 'signup', component: RegisterComponent},
+  {path: '', component: SliderComponent},
 ]
 
 @NgModule({
@@ -31,14 +32,16 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent]
+  entryComponents:[LoginComponent, RegisterComponent]
 })
 export class AppModule { }

@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DebugElement } from '@angular/core';
- 
 import { FooterComponent } from './footer.component';
 
 import { By } from '@angular/platform-browser';
@@ -29,16 +28,16 @@ describe('FooterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have have a link for FEEDBACK',()=> {
-    debugElement = fixture.debugElement.query(By.css('.left'))
-    
+  it('should have have a link for FEEDBACK', () => {
+    debugElement = fixture.debugElement.query(By.css('.left'));
     htmlElement = debugElement.nativeElement;
     expect(htmlElement.textContent).toEqual('FEEDBACK');
   });
 
-  it('should have have a link for Contact Us',()=> {
-    debugElement = fixture.debugElement.query(By.css('.right'))
+  it('should have have a link for Contact Us', () => {
+    debugElement = fixture.debugElement.query(By.css('.right'));
     htmlElement = debugElement.nativeElement;
     expect(htmlElement.textContent).toEqual('CONTACT US');
   });
+  /*Clicks need to be tested*/
 });

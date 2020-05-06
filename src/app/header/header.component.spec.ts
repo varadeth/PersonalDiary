@@ -11,7 +11,7 @@ describe('HeaderComponent', () => {
   let htmlElement: HTMLElement;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      schemas:[ CUSTOM_ELEMENTS_SCHEMA ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [ HeaderComponent, ]
     })
     .compileComponents();
@@ -27,21 +27,21 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have navigationLinksComponent',() => {
+  it('should have navigationLinksComponent', () => {
     debug = fixture.debugElement.query(By.css('ul'));
     debug = debug.query(By.css('app-navigationlinks'));
     htmlElement = debug.nativeElement;
     expect(htmlElement).toBeDefined();
   });
 
-  it('should have icon',()=>{
+  it('should have icon', () => {
     debug = fixture.debugElement.query(By.css('ul'));
     debug = debug.query(By.css('li'));
     htmlElement = debug.nativeElement;
     expect(htmlElement.querySelector('img').src).toContain(component.brandImage);
   });
 
-  it('should have title as DIARY',()=>{
+  it('should have title as DIARY', () => {
     debug = fixture.debugElement.query(By.css('.brand-name'));
     htmlElement = debug.nativeElement;
     expect(htmlElement.textContent).toBe('DIARY');

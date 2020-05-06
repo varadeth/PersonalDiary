@@ -8,31 +8,31 @@ import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dial
 class DialogTestModule { }
 describe('AppComponent', () => {
 
-  let component: AppComponent
+  let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let debugElement: DebugElement;
   let htmlElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      schemas:[ CUSTOM_ELEMENTS_SCHEMA ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [
         AppComponent
       ],
-      providers:[
+      providers: [
         MatDialog,
       ]
     }).compileComponents();
   }));
 
-  beforeEach(()=>{
+  beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  })
+  });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
@@ -54,6 +54,6 @@ describe('AppComponent', () => {
     htmlElement = debugElement.nativeElement;
     expect(htmlElement).toBeDefined();
   });
-  
 
+  /*routes need to be tested*/
 });
