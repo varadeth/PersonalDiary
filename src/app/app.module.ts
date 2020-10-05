@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,12 +13,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-
-const appRoutes: Routes = [
-  {path: '', component: SliderComponent},
-]
+import { ContentComponent } from './content/content.component';
+import { MatCardModule } from '@angular/material/card';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { ContentAddComponent } from './content-add/content-add.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { DateFormatPipe } from './DateFormatPipe/date-format.pipe';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,20 +34,30 @@ const appRoutes: Routes = [
     SliderComponent,
     RegisterComponent,
     LoginComponent,
-    NavigationlinksComponent
+    NavigationlinksComponent,
+    ContentComponent,
+    ContentDetailComponent,
+    ContentAddComponent,
+    DateFormatPipe,
+    SuccessAlertComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true}),
     BrowserAnimationsModule,
     FormsModule,
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [DateFormatPipe],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent, RegisterComponent]
+  entryComponents: [LoginComponent, RegisterComponent, SuccessAlertComponent]
 })
 export class AppModule { }

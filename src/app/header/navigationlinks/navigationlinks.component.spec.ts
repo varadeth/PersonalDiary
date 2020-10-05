@@ -31,12 +31,12 @@ describe('NavigationlinksComponent', () => {
   });
 
   it('should have 2 links', () => {
-    const debugElementList: DebugElement[] = fixture.debugElement.queryAll(By.css('li'));
+    const debugElementList: DebugElement[] = fixture.debugElement.queryAll(By.css('.rightStyle'));
     expect(debugElementList.length).toEqual(2);
   });
 
   it('should have links named login and signup', () => {
-    const debugElementList: DebugElement[] = fixture.debugElement.queryAll(By.css('li'));
+    const debugElementList: DebugElement[] = fixture.debugElement.queryAll(By.css('.linkStyle'));
     let count = 0;
     for (let index = 0; index < debugElementList.length; index++) {
       const el = debugElementList[index];
@@ -51,8 +51,8 @@ describe('NavigationlinksComponent', () => {
 
   it('should open dialog box', () => {
     const debugList: DebugElement[] = fixture.debugElement.queryAll(By.css('linkStyle'));
-    for (const debugElement of debugList) {
-      htmlElement = debugElement.nativeElement;
+    for (const debugEl of debugList) {
+      htmlElement = debugEl.nativeElement;
       expect(htmlElement.click()).toHaveBeenCalled();
     }
   });

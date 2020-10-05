@@ -4,6 +4,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { RegisterComponent } from './register.component';
 import { MatDialogRef } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
@@ -13,6 +14,7 @@ describe('RegisterComponent', () => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [ RegisterComponent ],
+      imports: [FormsModule],
       providers: [
         {
           provide: MatDialogRef,

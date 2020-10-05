@@ -1,9 +1,11 @@
 .mynavbar {
     background-color: #663897;
-    position: sticky;
     z-index: 1;
     overflow: hidden;
     height: 9.11%;
+    position: inherit;
+    top: 0px;
+    width: 100%;
 }
 
 .ulStyle {
@@ -37,4 +39,12 @@
     font: 22pt open-sans;
     text-decoration: none;
     font-weight: 500;
+}
+
+
+.navigationLinksStyle {
+    display: inline-block; 
+    width: 50%; 
+    position: relative; 
+    height: 100%;
 }

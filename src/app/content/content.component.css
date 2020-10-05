@@ -1,0 +1,24 @@
+.content {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    min-height: 79.57%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardClass {
+    margin: 10px;
+    min-width: 60%;
+    max-width: 100%;
+    min-height: 380px;
+    background-color: #bdfcfa;
+}
+
+.contentHeight {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

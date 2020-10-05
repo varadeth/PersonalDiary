@@ -1,0 +1,29 @@
+.addStyle {
+    width: 100%;
+    height: 79.57%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cardClass {
+    margin: 1%;
+    min-width: 60%;
+    max-width: 100%;
+    min-height: 95%;
+    background-color: #bdfcfa;
+}
+
+.contentClass {
+    width: 100%;
+    align-items: center;
+}
+
+.formClass {
+    width: 100%;
+}
+
+.formFieldClass {
+    width: 100%;
+}

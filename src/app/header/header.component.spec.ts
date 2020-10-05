@@ -28,7 +28,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should have navigationLinksComponent', () => {
-    debug = fixture.debugElement.query(By.css('ul'));
+    debug = fixture.debugElement.query(By.css('.navigationLinksStyle'));
     debug = debug.query(By.css('app-navigationlinks'));
     htmlElement = debug.nativeElement;
     expect(htmlElement).toBeDefined();

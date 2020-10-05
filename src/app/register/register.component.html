@@ -43,7 +43,9 @@
             <mat-icon  (click)='repassDisplay = !repassDisplay' matSuffix>remove_red_eye</mat-icon>
             <mat-error *ngIf="repassword.invalid && repassword.touched">Re-Type Password is required</mat-error>
         </mat-form-field>
-        
+        <mat-error  *ngIf="errorMessage !== null">
+            {{ errorMessage }} 
+        </mat-error>
         <mat-dialog-actions>
             <button type="submit" mat-raised-button class="signUpButton">SignUp</button>
         </mat-dialog-actions>

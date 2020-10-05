@@ -1,13 +1,11 @@
-<h1 mat-dialog-title class="header">
-    Login
-</h1>
+<h1 mat-dialog-title class="header">Login</h1>
 <div>
     <form (ngSubmit)="onLogin(f)" #f="ngForm">
         <mat-form-field style="width: 100%;">
             <mat-label>Username</mat-label>
-            <input matInput type='text' required id="username" name="username" #username='ngModel' [(ngModel)]='loginModel.username'>
+            <input name="username" matInput type='text' required id="username" #username='ngModel' [(ngModel)]='loginModel.username'>
             <mat-icon matSuffix style="cursor: pointer;">person_outline</mat-icon>
-            <mat-error *ngIf='username.invalid && username.touched'>
+            <mat-error *ngIf='(username.invalid && username.touched) || show'>
                 Username is Required
             </mat-error>
         </mat-form-field>
@@ -16,7 +14,7 @@
             <mat-label>Password</mat-label>
             <input matInput type="{{ display ? 'text': 'password'}}" required id="password" name="password" #password='ngModel' [(ngModel)]='loginModel.password' >
             <mat-icon matSuffix (click)="display = !display" style="cursor: pointer;">remove_red_eye</mat-icon>
-            <mat-error *ngIf='password.invalid && password.touched'>
+            <mat-error *ngIf='(password.invalid && password.touched) || show'>
                 Password is Required
             </mat-error>
         </mat-form-field>
