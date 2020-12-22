@@ -1,6 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { SignUpModel } from '../models/SignUpModel';
 
 @Injectable({
@@ -15,6 +16,6 @@ export class RegisterService implements OnDestroy{
   }
 
   public registerUser(user: SignUpModel): Observable<any> {
-    return this.http.post('http://localhost:8080/register', user);
+    return this.http.post(environment.baseUrl + environment.signup, user);
   }
 }

@@ -1,3 +1,16 @@
-<div class="rightStyle" *ngFor="let link of links;">
-    <div class="linkStyle" (click)="buttonPressed(link.router)">{{link.name}}</div>
+<div *ngIf="loggedIn; else notLogged">
+    <div class="rightStyle">
+        <div class="linkStyle" (click)="onLogoutPressed()">Logout</div>
+    </div>
+    <div class="rightStyle">
+        <div class="linkStyle" (click)="onAddContent()">Add</div>
+    </div>
 </div>
+<ng-template #notLogged>
+    <div class="rightStyle">
+        <div class="linkStyle" (click)="onRegister()">SignUp</div>
+    </div>
+    <div class="rightStyle">
+        <div class="linkStyle" (click)="onLoginPressed()">Login</div>
+    </div>
+</ng-template>

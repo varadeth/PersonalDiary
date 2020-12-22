@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
         password: this.loginForm.value.password
       };
       this.loginService.login(this.loginModel).subscribe((responseData) => {
+        localStorage.setItem('userId', responseData.uid.toString());
         localStorage.setItem('token', responseData.token);
         this.router.navigate(['/content']);
         this.dialogRef.close();

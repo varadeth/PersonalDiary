@@ -1,4 +1,6 @@
 export class ContentModel {
-    content: string;
+    id?: number;
+    title: string;
+    text: string;
     date: string;
 }

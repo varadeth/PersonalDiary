@@ -4,14 +4,20 @@
         <form class="formClass" (ngSubmit)="addContent(f)"  #f="ngForm">
             <mat-card-content class="contentClass">
                 <mat-form-field class="formFieldClass">
-                    <textarea required rows="15" matInput name="content" id="content" placeholder="Content" #content="ngModel" ngModel></textarea>
+                    <input matInput id="title" name="title" placeholder="Title" required #title="ngModel" ngModel>
                 </mat-form-field>
-                <mat-error *ngIf="content.invalid && content.touched">Content cannot be empty</mat-error>
+                <mat-error *ngIf="title.invalid && title.touched">
+                    Title is Required
+                </mat-error>
+                <mat-form-field class="formFieldClass">
+                    <textarea required rows="10" matInput name="diaryContent" id="diaryContent" placeholder="Content" #diaryContent="ngModel" ngModel></textarea>
+                </mat-form-field>
+                <mat-error *ngIf="diaryContent.invalid && diaryContent.touched">Content cannot be empty</mat-error>
                 <mat-form-field class="formFieldClass">
                     <input matInput [matDatepicker]="picker" disabled placeholder= {{date}} name="date" #d="ngModel" ngModel>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
+                </mat-form-field>
             </mat-card-content>
             <mat-card-actions style="align-items: center;">
                 <button mat-raised-button color="primary" type="submit">Add</button>

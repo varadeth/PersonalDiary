@@ -1,10 +1,10 @@
 <div class="content">   
-    <mat-card class="cardClass" *ngFor="let in of [0,1];">
+    <mat-card class="cardClass" *ngFor="let content of contents">
         <mat-card-title style="text-align: center;">
-            Dummy Card
+            {{content.title}}
         </mat-card-title>
         <mat-card-content class="contentHeight">
-            Hi...This is a dummy cardHi...This is a dummy card<br><br>Hi...This is a dummy card<br><br><br><br><br>Hi...This is a dummy card<br><br><br><br><br>
+            {{content.text}}
         </mat-card-content>
         <mat-card-actions >
             <button mat-raised-button (click)="onViewContent()">
@@ -17,7 +17,7 @@
             </button>
         </mat-card-actions>
         <mat-card-subtitle style="text-align: end;">
-            10/05/2020
+            {{content.date}}
         </mat-card-subtitle>
     </mat-card>
 </div>
