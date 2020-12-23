@@ -46,6 +46,7 @@ export class NavigationlinksComponent implements OnInit {
   onLogoutPressed(): void {
     this.loginService.logout();
     this.loggedIn = false;
+    localStorage.clear();
     this.router.navigate(['/']);
   }
 

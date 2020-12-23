@@ -1,0 +1,16 @@
+.cardClass {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 60%;
+    min-height: 100px;
+    background-color: #bdfcfa;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    min-height: 79.57%;
+    flex-direction: column;
+    justify-content: center;
+}

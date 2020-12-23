@@ -5,4 +5,5 @@ export const environment = {
   signup: '/register',
   addpost: '/addContent',
   content: '/allPosts',
+  contentWithId: '/post',
 };

@@ -15,4 +15,8 @@ export class ContentService {
     console.log(environment.baseUrl + environment.content + '/' + userId);
     return this.http.get<ContentModel[]>(environment.baseUrl + environment.content + '/' + userId);
   }
+
+  getContentById(userId: number, did: number): Observable<ContentModel> {
+    return this.http.get<ContentModel>(environment.baseUrl + environment.contentWithId + '/' + userId + '/' + did);
+  }
 }

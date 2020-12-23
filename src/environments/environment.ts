@@ -9,6 +9,7 @@ export const environment = {
   signup: '/register',
   addpost: '/addContent',
   content: '/posts',
+  contentWithId: '/post',
 };
 
 /*

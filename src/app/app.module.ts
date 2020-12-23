@@ -26,6 +26,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthInterceptorService } from './services/AuthInterceptor.service';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { AuthInterceptorService } from './services/AuthInterceptor.service';
     MatDatepickerModule,
     MatNativeDateModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollingModule
   ],
   providers: [
     DateFormatPipe,
