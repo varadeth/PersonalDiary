@@ -1,8 +1,8 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { SignUpModel } from '../models/SignUpModel';
+import { SignUpModel } from '../../models/SignUpModel';
 
 @Injectable({
   providedIn: 'root'

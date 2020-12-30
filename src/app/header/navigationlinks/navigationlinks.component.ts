@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import {LoginComponent } from '../../login/login.component';
 import { RegisterComponent } from 'src/app/register/register.component';
-import { LoginService } from 'src/app/login-service/login.service';
+import { LoginService } from '../../services/login-service/login.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 import { SignUpModel } from '../models/SignUpModel';
 import { NgForm } from '@angular/forms';
-import { RegisterService } from '../register-service/register.service';
+import { RegisterService } from '../services/register-service/register.service';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { style } from '@angular/animations';
 import { ActivatedRoute, Router } from '@angular/router';

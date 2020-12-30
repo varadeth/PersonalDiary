@@ -5,7 +5,7 @@ import { NgForm } from '@angular/forms';
 
 import { LoginModel } from '../models/LoginModel';
 import { Router } from '@angular/router';
-import { LoginService } from '../login-service/login.service';
+import { LoginService } from '../services/login-service/login.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
