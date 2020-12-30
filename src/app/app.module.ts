@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,6 +25,8 @@ import { DateFormatPipe } from './DateFormatPipe/date-format.pipe';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthInterceptorService } from './services/AuthInterceptor.service';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -54,9 +56,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatDatepickerModule,
     MatNativeDateModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollingModule
   ],
-  providers: [DateFormatPipe],
+  providers: [
+    DateFormatPipe,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent, RegisterComponent, SuccessAlertComponent]
 })

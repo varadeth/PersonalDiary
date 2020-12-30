@@ -1,6 +1,6 @@
 .addStyle {
     width: 100%;
-    height: 79.57%;
+    min-height: 79.57%;
     align-items: center;
     display: flex;
     flex-direction: column;

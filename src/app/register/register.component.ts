@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
       email: form.value.email,
       password: form.value.password,
       username: form.value.username
-    }
+    };
     this.registerService.registerUser(this.signUpModel).subscribe((responseData) => {
       this.closeModal();
       console.log('Register : ' + responseData);

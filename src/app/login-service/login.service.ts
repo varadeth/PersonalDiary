@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { LoginModel } from '../models/LoginModel';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class LoginService {
   }
 
   login(loginModel: LoginModel): Observable<{token: string}> {
-    return this.http.post<{token: string}>('http://localhost:8080/authenticate', loginModel);
+    return this.http.post<{token: string}>(environment.baseUrl + environment.login, loginModel);
   }
 
   logout(): void {

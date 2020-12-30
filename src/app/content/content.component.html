@@ -1,23 +1,26 @@
-<div class="content">   
-    <mat-card class="cardClass" *ngFor="let in of [0,1];">
-        <mat-card-title style="text-align: center;">
-            Dummy Card
-        </mat-card-title>
-        <mat-card-content class="contentHeight">
-            Hi...This is a dummy cardHi...This is a dummy card<br><br>Hi...This is a dummy card<br><br><br><br><br>Hi...This is a dummy card<br><br><br><br><br>
-        </mat-card-content>
-        <mat-card-actions >
-            <button mat-raised-button (click)="onViewContent()">
-                View
-                <mat-icon matSuffix>description</mat-icon>
-            </button>
-            <button mat-raised-button  color="primary">
-                Edit
-                <mat-icon matSuffix>edit</mat-icon>
-            </button>
-        </mat-card-actions>
-        <mat-card-subtitle style="text-align: end;">
-            10/05/2020
-        </mat-card-subtitle>
-    </mat-card>
+<!-- <div *ngIf="(contentObs | async) as contents" class="content">   -->
+<div class="content">
+    <!-- <cdk-virtual-scroll-viewport itemSize="100" (scrolledIndexChange)="nextBatch($event)"> -->
+        <mat-card class="cardClass" *ngFor="let content of contents; let i = index;">
+            <mat-card-title style="text-align: center;">
+                {{content.title}}
+            </mat-card-title>
+            <mat-card-content class="contentHeight">
+                {{content.text}}
+            </mat-card-content>
+            <mat-card-actions >
+                <button mat-raised-button (click)="onViewContent(i)">
+                    View
+                    <mat-icon matSuffix>description</mat-icon>
+                </button>
+                <button mat-raised-button (click)="onEditContent(i)" color="primary">
+                    Edit
+                    <mat-icon matSuffix>edit</mat-icon>
+                </button>
+            </mat-card-actions>
+            <mat-card-subtitle style="text-align: end;">
+                {{content.date}}
+            </mat-card-subtitle>
+        </mat-card>
+    <!-- </cdk-virtual-scroll-viewport>  -->
 </div>

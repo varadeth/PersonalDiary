@@ -9,9 +9,8 @@
 
 .cardClass {
     margin: 10px;
-    min-width: 60%;
-    max-width: 100%;
-    min-height: 380px;
+    width: 60%;
+    min-height: 100px;
     background-color: #bdfcfa;
 }
 
