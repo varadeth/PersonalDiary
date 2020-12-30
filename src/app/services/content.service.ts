@@ -11,12 +11,12 @@ export class ContentService {
 
   constructor(private http: HttpClient) { }
 
-  getContentList(userId: number): Observable<ContentModel[]> {
-    console.log(environment.baseUrl + environment.content + '/' + userId);
-    return this.http.get<ContentModel[]>(environment.baseUrl + environment.content + '/' + userId);
+  getContentList(): Observable<ContentModel[]> {
+    console.log(environment.baseUrl + environment.content);
+    return this.http.get<ContentModel[]>(environment.baseUrl + environment.content);
   }
 
-  getContentById(userId: number, did: number): Observable<ContentModel> {
-    return this.http.get<ContentModel>(environment.baseUrl + environment.contentWithId + '/' + userId + '/' + did);
+  getContentById(did: number): Observable<ContentModel> {
+    return this.http.get<ContentModel>(environment.baseUrl + environment.contentWithId + '/' + did);
   }
 }

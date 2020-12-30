@@ -10,6 +10,7 @@ export const environment = {
   addpost: '/addContent',
   content: '/posts',
   contentWithId: '/post',
+  updatepost: '/update',
 };
 
 /*

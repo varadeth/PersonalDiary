@@ -35,6 +35,6 @@ export class ContentDetailComponent implements OnInit {
   }
 
   getContentById(did: number): Observable<ContentModel> {
-    return this.contentService.getContentById(parseInt(localStorage.getItem('userId')), did);
+    return this.contentService.getContentById(did);
   }
 }

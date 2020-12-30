@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../login-service/login.service';
 
 @Component({
   selector: 'app-slider',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    if(localStorage.getItem('token')) {
+      this.router.navigate(['/content'])
+    }
   }
 
 }

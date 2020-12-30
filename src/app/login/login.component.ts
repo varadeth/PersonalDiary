@@ -43,8 +43,7 @@ export class LoginComponent implements OnInit {
         password: this.loginForm.value.password
       };
       this.loginService.login(this.loginModel).subscribe((responseData) => {
-        localStorage.setItem('userId', responseData.uid.toString());
-        localStorage.setItem('token', responseData.token);
+        this.storeIntoLocalStorage(responseData );
         this.router.navigate(['/content']);
         this.dialogRef.close();
       }, (err: HttpErrorResponse) => {
@@ -55,5 +54,14 @@ export class LoginComponent implements OnInit {
 
   validate(form: NgForm): boolean {
     return true;
+  }
+
+  storeIntoLocalStorage(responseData: {token: string}) {
+    localStorage.setItem('token', responseData.token);
+  }
+
+  
+  logout() {
+    localStorage.removeItem("token");
   }
 }

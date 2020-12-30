@@ -11,8 +11,8 @@ export class LoginService {
   constructor(private http: HttpClient) {
   }
 
-  login(loginModel: LoginModel): Observable<{token: string, uid: number}> {
-    return this.http.post<{token: string, uid: number}>(environment.baseUrl + environment.login, loginModel);
+  login(loginModel: LoginModel): Observable<{token: string}> {
+    return this.http.post<{token: string}>(environment.baseUrl + environment.login, loginModel);
   }
 
   logout(): void {

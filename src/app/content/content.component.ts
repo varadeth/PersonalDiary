@@ -20,8 +20,8 @@ export class ContentComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService) { }
 
   ngOnInit() {
-    this.contentService.getContentList(parseInt(localStorage.getItem('userId'))).subscribe((data) => {
-      console.log(data[0]);
+    this.contentService.getContentList().subscribe((data) => {
+      console.log(data);
       this.contents = data;
     });
   }
@@ -38,6 +38,20 @@ export class ContentComponent implements OnInit {
       }
     };
     this.router.navigate([this.contents[index].did], navigationExtras);
+  }
+
+  onEditContent(index: number) {
+    let navigationExtras: NavigationExtras = {
+      relativeTo: this.route,
+      state: {
+        id: this.contents[index].id,
+        did: this.contents[index].did,
+        text: this.contents[index].text,
+        title: this.contents[index].title,
+        date: this.contents[index].date
+      }
+    };
+    this.router.navigate(['edit', this.contents[index].did], navigationExtras);
   }
 
   nextBatch(e, offset) {

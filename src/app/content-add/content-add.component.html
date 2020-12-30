@@ -4,13 +4,13 @@
         <form class="formClass" (ngSubmit)="addContent(f)"  #f="ngForm">
             <mat-card-content class="contentClass">
                 <mat-form-field class="formFieldClass">
-                    <input matInput id="title" name="title" placeholder="Title" required #title="ngModel" ngModel>
+                    <input matInput id="title" name="title" placeholder="Title" required #title="ngModel" ngModel [(ngModel)]="contentModel.title">
                 </mat-form-field>
                 <mat-error *ngIf="title.invalid && title.touched">
                     Title is Required
                 </mat-error>
                 <mat-form-field class="formFieldClass">
-                    <textarea required rows="10" matInput name="diaryContent" id="diaryContent" placeholder="Content" #diaryContent="ngModel" ngModel></textarea>
+                    <textarea required rows="10" matInput name="diaryContent" id="diaryContent" placeholder="Content" #diaryContent="ngModel" ngModel [(ngModel)]="contentModel.text"></textarea>
                 </mat-form-field>
                 <mat-error *ngIf="diaryContent.invalid && diaryContent.touched">Content cannot be empty</mat-error>
                 <mat-form-field class="formFieldClass">

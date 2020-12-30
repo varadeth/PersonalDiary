@@ -6,4 +6,5 @@ export const environment = {
   addpost: '/addContent',
   content: '/allPosts',
   contentWithId: '/post',
+  updatepost: '/update',
 };
